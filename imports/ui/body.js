@@ -9,6 +9,9 @@ import './body.html';
 
 Template.body.onCreated(function bodyOnCreated() {
   this.state = new ReactiveDict();
+// Adding subscriber
+  Meteor.subscribe('tasks');
+
 });
 //pass data into the template
 Template.body.helpers({
